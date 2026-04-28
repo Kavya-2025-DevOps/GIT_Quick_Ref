@@ -1,1 +1,124 @@
+Here’s the simplest way to understand **merge vs rebase** in Git:
+
+---
+
+# 🌿 MERGE = “Combine histories”
+
+When you **merge**, Git takes two branches and **joins them together**.
+
+### Think of it like:
+
+> “I’m bringing my work into yours, but keeping both histories as they are.”
+
+### Example:
+
+```bash
+git checkout main
+git merge feature
+```
+
+### What happens:
+
+* A new “merge commit” is created
+* History shows both branches clearly
+* Nothing is rewritten
+
+### 🧠 Result:
+
+```
+A---B---C (main)
+     \     
+      D---E (feature)
+           \
+            M (merge commit)
+```
+
+### 👍 Pros:
+
+* Safe (doesn’t change history)
+* Easy to understand in teams
+* Good for shared branches
+
+### 👎 Cons:
+
+* History can look messy with many merge commits
+
+---
+
+# 🌱 REBASE = “Re-write history”
+
+When you **rebase**, Git takes your branch and **moves it on top of another branch**.
+
+### Think of it like:
+
+> “I want my work to look like I started from the latest version of main.”
+
+### Example:
+
+```bash
+git checkout feature
+git rebase main
+```
+
+### What happens:
+
+* Your commits are “replayed” on top of `main`
+* History is rewritten (new commit IDs)
+* No merge commit is created
+
+### 🧠 Result:
+
+Before:
+
+```
+A---B---C (main)
+     \
+      D---E (feature)
+```
+
+After rebase:
+
+```
+A---B---C---D'---E' (feature)
+```
+
+---
+
+### 👍 Pros:
+
+* Clean, linear history
+* Easier to read commit log
+* Looks like everything was built in order
+
+### 👎 Cons:
+
+* Rewrites history (can be dangerous in shared branches)
+* Can cause confusion if not used carefully
+
+---
+
+# ⚖️ Simple Comparison
+
+| Feature      | Merge 🌿           | Rebase 🌱             |
+| ------------ | ------------------ | --------------------- |
+| History      | Preserved          | Rewritten             |
+| Commit graph | Branchy / visible  | Linear / clean        |
+| Safety       | Very safe          | Risky if misused      |
+| Best use     | Shared branches    | Local feature cleanup |
+| Extra commit | Yes (merge commit) | No                    |
+
+---
+
+# 🧠 One-line memory trick
+
+* **Merge → “Join paths”**
+* **Rebase → “Replay work on top”**
+
+---
+
+If you want, I can also show:
+
+* When companies prefer merge vs rebase in real workflows
+* Or a visual diagram with a real example repo
+* Or common interview questions on this topic
 
