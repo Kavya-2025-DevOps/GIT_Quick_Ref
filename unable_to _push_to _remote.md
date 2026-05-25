@@ -2,15 +2,13 @@ If you can’t push code to a remote Git repo, it usually comes down to a few co
 
 🚨 1. First, check the error message
 
-Run:
-
-git push origin main
+Run: git push origin main
 
 Whatever Git prints is the key. Common ones are:
 
-Authentication failed
-Rejected (non-fast-forward)
-Permission denied
+Authentication failed , 
+Rejected (non-fast-forward) ,
+Permission denied,
 Remote not found
 
 
@@ -34,9 +32,10 @@ If using HTTPS, switch to SSH:
 
 git remote set-url origin git@github.com:username/repo.git
 
-Test SSH:
+Test SSH: ssh -T git@github.com
 
-ssh -T git@github.com
+
+
 🔄 3. Non-fast-forward error (very common)
 ❌ Error:
 rejected (non-fast-forward)
@@ -52,6 +51,8 @@ OR:
 
 git pull origin main
 git push origin main
+
+
 🚫 4. Permission denied
 ❌ Error:
 Permission denied (publickey)
@@ -62,6 +63,7 @@ Regenerate SSH key if needed:
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
 Then add it to GitHub.
+
 
 🌐 5. Remote repository not found
 ❌ Error:
@@ -75,6 +77,8 @@ git remote -v
 Fix it:
 
 git remote set-url origin <correct-url>
+
+
 🧩 6. You are on wrong branch
 
 Check:
@@ -85,9 +89,10 @@ Push correct branch:
 
 git push origin feature-login
 
-Or set upstream:
+Or set upstream: git push -u origin feature-login
 
-git push -u origin feature-login
+
+
 ⚠️ 7. Detached HEAD state
 
 Check:
@@ -100,6 +105,9 @@ Fix:
 
 git checkout main
 git push origin main
+
+
+
 🧠 Quick diagnosis cheat sheet
 Problem	Fix
 Auth failed	Use PAT or SSH
