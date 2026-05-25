@@ -1,0 +1,25 @@
+GitHub Copilot is an AI-powered coding assistant that acts like a “pair programmer,” helping developers write code faster, reduce repetitive tasks, and focus more on problem-solving.
+
+
+Key Features of GitHub Copilot
+Code suggestions: Autocompletes functions, boilerplate, and repetitive code as you type in your IDE.
+
+Code explanations: Explains unfamiliar code snippets or libraries in plain language.
+
+Pull request support: Generates descriptions of changes, reviews code, and suggests improvements.
+
+Terminal integration: Executes commands and builds workflows using natural language in the CLI.
+
+Copilot Chat: Lets you ask questions about your code, debug issues, or get step-by-step guidance.
+
+Copilot Spaces: Organizes project context so Copilot provides more relevant answers.
+
+
+Limitations & Considerations
+Accuracy: Suggestions may not always be optimal or secure; developers must review code carefully.
+
+Licensing concerns: Generated code may resemble open-source snippets, so teams should check compliance.
+
+Cost: Free tier is limited; advanced features require paid plans.
+
+Privacy: Enterprise users should configure governance to prevent unauthorized access. 
