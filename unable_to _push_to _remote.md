@@ -12,6 +12,8 @@ Authentication failed
 Rejected (non-fast-forward)
 Permission denied
 Remote not found
+
+
 🔐 2. Authentication issues (MOST COMMON)
 ❌ Error:
 Authentication failed
@@ -21,13 +23,12 @@ GitHub/GitLab no longer accepts passwords. You must use:
 
 👉 Option A: Personal Access Token (PAT)
 Go to GitHub → Settings → Developer settings → Tokens
+
 Generate token
 Use it instead of password when pushing
 👉 Option B: SSH (recommended)
 
-Check remote:
-
-git remote -v
+Check remote: git remote -v
 
 If using HTTPS, switch to SSH:
 
